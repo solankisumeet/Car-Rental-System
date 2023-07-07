@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rent My Wheel</title>
+        <!--link to css-->
+        <link rel="stylesheet" href="/static/css/style.css">
+        <!--icons of box-->
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <a href="#" class="logo"><img src="/static/img/IMG_1662.PNG"  alt=""></a>
+        {% if username != "": %}
+        <span> Welcome {{ username }} </span>
+        {% endif %}
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ride">Ride</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+        <div class="header-btn">
+             {% if username == "": %}
+           
+                <a href="{{ url_for('signup') }}" class="sign-up">Sign Up</a>
+                <a href=" {{ url_for('login') }}" class="sign-in">Sign In</a>
+                
+            {% else %}
+            <div>
+
+            <span>
+            <a href="{{ url_for('logout') }}" class="sign-up">logout</a>
+            </span>
+        </div>
+            {% endif %}
+        </div>
+    </header>
+<!--home----->
+<section class="home" id="home">
+    <div class="text">
+        <h1><span><br>
+            Looking</span> to <br>rent a car</h1>
+        <p>Experience the Car Rental App on</p>
+        <div class="app-stores">
+            <img src="/static/img/ios.png" alt="">
+            <img src="/static/img/512x512.png" alt="">
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form action="">
+            <div class="input-box">
+                <span>Location</span>
+                <input type="search" name="=" id="" placeholder="Search Places">
+            </div>
+            <div class="input-box">
+                <span>Pick-Up Date</span>
+                <input type="date" name="" id="">
+            </div>
+            <div class="input-box">
+                <span>Return Date</span>
+                <input type="date" name="" id="">
+            </div>
+            <input type="submit" name="" id="" class="btn">
+        </form>
+    </div>
+</section>
+<!--Ride-->
+<section class="ride" id="ride">
+    <div class="heading">
+        <span>How Its Work</span>
+        <h1>Rent with 3 Easy Steps</h1>
+    </div>
+    <div class="ride-container">
+        <div class="box">
+            <i class='bx bxs-map'></i>
+            <h2>Choose A Location</h2>
+            <p>Choose a location from where you want the car to pick you up.
+                Specify exact details including any famous landmark near the location for easy pick up
+        </div>
+
+        <div class="box">
+            <i class='bx bxs-calendar-check' ></i>
+            <h2>Pick-Up Date</h2>
+            <p>Choose a date when you plan to travel and want to be picked up.
+        </div>
+
+        <div class="box">
+            <i class='bx bxs-calendar-star' ></i>
+            <h2>Book A Car</h2>
+            <p>From the range of available cars,
+                Pick one that best suits your needs and comfort.
+        </div>
+    </div>
+</section>
+<!-- Services -->
+<section class="services" id="services"></section>
+    <div class="heading">
+        <span>Best Services</span>
+        <h1>Explore Out Top Deals <br> From Top Rated Dealers</h1>
+    </div>
+    <div class="services-container">
+        <div class="box">
+            <div class="box-img">
+                <img src="/static/img/polo.jpg" alt="">
+            </div>
+            <p>2016</p>
+            <h3>VW Polo GT 2.0</h3>
+            <h2>₹15,50,000| ₹3,000 <span>/day</span></h2>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="/static/img/nexon.jpg" alt="">
+            </div>
+            <p>2022</p>
+            <h3>TATA Nexon</h3>
+            <h2>₹12,50,000 | ₹2,800 <span>/day</span></h2>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="/static/img/breeza.jpg" alt="">
+            </div>
+            <p>2018</p>
+            <h3>Maruti Suzuki Breeza</h3>
+            <h2>₹10,00,000 | ₹2,500 <span>/day</span></h2>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="/static/img/altroz.jpg" alt="">
+            </div>
+            <p>2023</p>
+            <h3>TATA Altroz</h3>
+            <h2>₹10,35,000 | ₹2,200 <span>/day</span></h2>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+
+        
+    </div>
+</section>
+<!--About-->
+<section class="about" id="about">
+    <div class="heading">
+        <span><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            About Us</span>
+        <h1> Best Customer Experience</h1>
+    </div>
+    <div class="about-container">
+        <div class="about-img">
+            <img src="/static/img/about.png" alt="">
+        </div>
+        <div class="about-text">
+            <span>About Us</span>
+            <p>I had a fantastic experience with Car Rental. The website was user-friendly, offering a seamless booking process. They had a wide range of well-maintained cars to choose from. The pricing was transparent with no hidden costs, and the customer support was excellent. I highly recommend this car rental portal!</p>
+            <p>Hello, it's really a pain to be followed. Free, distinction. Those who do, I will explain the pain flight itself will open!</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+    <div class="heading">
+        <span>Reviews</span>
+        <h1>Whats Our Customer Say</h1>
+    </div>
+    <div class="reviews-container">
+        <div class="box">
+            <div class="rev-img">
+                <img src="/static/img/rev1.jpg" alt="">
+            </div>
+            <h2>John Wick</h2>
+            <div class="stars">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+            </div>
+            <p>The car rental portal I used recently and I am very satisfied with the service. Here are some of the features that impressed me: Easy Website: The car rental portal's website was easy and convenient. The process of searching, comparing prices and selecting cars was smooth and hassle-free. Wide Car Choice: The portal had a wide global list of lots of cars.</p>
+        </div>
+
+        <bdo class="box">
+            <div class="rev-img">
+                <img src="/static/img/model10.jpg" alt="">
+            </div>
+            <h2>Peter Parker</h2>
+            <div class="stars">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+            </div>
+            <p>If you're a true automotive enthusiast seeking an adrenaline-pumping experience, look no further than Car Rental ! Here's why their pops and bangs feature made my rental unforgettable:
+
+                Explosive Soundtrack: The moment I fired up the engine, a symphony of crackles and pops erupted, instantly putting a smile on my face. The pops and bangs feature added a whole new level of excitement to my driving experience, making every acceleration and gear change an auditory delight.
+                
+                Unleashing the Beast: The cars available through Car Rental were specifically chosen for their performance prowess. I had the pleasure of renting a machine that delivered thrilling power combined with the satisfying crackles on overrun. It was a true beast on the road, and the pops and bangs made it even more exhilarating.</p>
+        </div>
+
+        <div class="box">
+            <div class="rev-img">
+                <img src="/static/img/image.jpg" alt="">
+            </div>
+            <h2>Tony Stark</h2>
+            <div class="stars">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+            </div>
+            <p>My experience with this Rental  was outstanding. The service was exceptional from start to finish. The cars were in pristine condition, and the customer support team was attentive and accommodating. The pickup and return process was convenient and hassle-free. I highly recommend this car rental portal for an unforgettable experience!
+                
+            </p>
+        </div>
+        <bdo class="box">
+            <div class="rev-img">
+                <img src="/static/img/rev2.jpg" alt="">
+            </div>
+            <h2>Steve Jobs</h2>
+            <div class="stars">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+            </div>
+            <p>Oh, where do I begin with my sarcastically delightful experience with Car Rental? This car rental portal is truly a gem that left me with a grin from ear to ear. Here's why:
+
+                Hilariously Easy Booking Process:
+                Booking a car through Car Rental was an absolute comedy show! It was as if they wanted to test my problem-solving skills with their confusing website. But hey, who doesn't enjoy a good brain teaser when reserving a vehicle?
+                Customer Support with a Sense of Humor:
+                The customer support team deserves a standing ovation for their exceptional comedy skills. They had me in stitches with their witty responses to my inquiries. Who knew that getting assistance could be such a laugh riot? Kudos to their humorous approach to customer service!</p>
+        </div>
+
+        <div class="box">
+            <div class="rev-img">
+                <img src="/static/img/rev3.jpg" alt="">
+            </div>
+            <h2>Lana Rose</h2>
+            <div class="stars">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+            </div>
+            <p>My experience with car rental has been really good. User-friendly interface and good service.</p>
+        </div>
+    </div>
+</section>
+<!--nwsletter-->
+<section class="newsletter">
+    <h2>Subscribe To Newsletter</h2>
+    <div class="box">
+        <input type="text" placeholder="Enter Your Email...">
+        <a href="#" class="btn">Subscribe</a>
+    </div>
+</section>
+<div class="copyright">
+    <p>&#169; RoyalGangster All Right Reserverd</p>
+    <div class="social">
+        <a href="#"><i class='bx bxl-facebook' ></i></a>
+        <a href="#"><i class='bx bxl-twitter' ></i></a>
+        <a href="#"><i class='bx bxl-instagram' ></i></a>
+    </div>
+</div>
+
+<!--scrollreveal-->
+<script src="https://unpkg.com/scrollreveal"></script>
+    <!--link to javascript-->
+    <script src="/static/js/main.js"></script>
+
+    </body>
+</html>
